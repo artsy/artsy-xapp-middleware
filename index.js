@@ -6,4 +6,4 @@ if (!require.extensions[".coffee"]) {
     return module._compile(source, filename);
   };
 }
-module.exports = require("./gravity-xapp.coffee");
+module.exports = require("./index.coffee");

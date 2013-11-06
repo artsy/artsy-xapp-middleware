@@ -1,6 +1,6 @@
 sinon = require 'sinon'
 express = require 'express'
-gravityXapp = require '../'
+artsyXappMiddleware = require '../'
 request = require 'superagent'
 moment = require 'moment'
 
@@ -8,7 +8,7 @@ sharifyData = {}
 app = express()
 gravity = express()
 
-app.use gravityXapp
+app.use artsyXappMiddleware
     gravityUrl: 'http://localhost:5000'
     clientId: 'fooid'
     clientSecret: 'foosecret'
@@ -18,7 +18,7 @@ app.get '/foo', (req, res) ->
 gravity.get '/api/v1/xapp_token', (req, res, next) ->
   res.send { xapp_token: 'x-foo-token', expires_in: moment().add('seconds', 2).format() }
 
-describe 'gravityXapp', ->
+describe 'artsyXappMiddleware', ->
 
   gravity.listen 5000
   app.listen 4000

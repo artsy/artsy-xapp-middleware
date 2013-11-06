@@ -1,7 +1,6 @@
 {
-  "name": "gravity-xapp",
+  "name": "artsy-xapp-middleware",
   "version": "0.0.1",
-  "private": true,
   "scripts": {
     "test": "mocha"
   },
