@@ -6,21 +6,21 @@ moment = require 'moment'
 
 sharifyData = {}
 app = express()
-gravity = express()
+artsy = express()
 
 app.use artsyXappMiddleware
-    gravityUrl: 'http://localhost:5000'
+    artsyUrl: 'http://localhost:5000'
     clientId: 'fooid'
     clientSecret: 'foosecret'
     sharifyData: sharifyData
 app.get '/foo', (req, res) ->
   res.send 'foo'
-gravity.get '/api/v1/xapp_token', (req, res, next) ->
+artsy.get '/api/v1/xapp_token', (req, res, next) ->
   res.send { xapp_token: 'x-foo-token', expires_in: moment().add('seconds', 2).format() }
 
 describe 'artsyXappMiddleware', ->
 
-  gravity.listen 5000
+  artsy.listen 5000
   app.listen 4000
 
 

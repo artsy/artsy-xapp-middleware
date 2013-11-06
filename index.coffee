@@ -2,8 +2,8 @@
 # Middleware that fetches an xapp token, stores it in [sharify](https://github.com/artsy/sharify) 
 # data, and expires it when necessary. Use like so...
 # 
-# app.use require('gravity-xapp')
-#   gravityUrl: 'http://artsy.net'
+# app.use require('artsy-xapp-middlware')
+#   artsyUrl: 'http://artsy.net'
 #   clientId: '133fsa3'
 #   clientSecret: 'f32j13f'
 #   sharifyData: require('sharify').data
@@ -15,7 +15,7 @@ moment = require 'moment'
 module.exports = (options) ->
 
   fetch = (callback) ->
-    request.get("#{options.gravityUrl}/api/v1/xapp_token").query(
+    request.get("#{options.artsyUrl}/api/v1/xapp_token").query(
       client_id: options.clientId
       client_secret: options.clientSecret
     ).end (err, res) ->
