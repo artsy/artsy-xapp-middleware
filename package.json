@@ -1,0 +1,19 @@
+{
+  "name": "gravity-xapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "moment": "*",
+    "superagent": "*",
+    "coffee-script": "*"
+  },
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*",
+    "express": "*",
+    "sinon": "*"
+  }
+}
