@@ -11,3 +11,5 @@ app.use require('artsy-xapp-middlware')
   clientSecret: 'f32j13f'
   sharifyData: require('sharify').data
 ````
+
+then access the xapp token via `sd.GRAVITY_XAPP_TOKEN`
