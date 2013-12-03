@@ -1,6 +1,6 @@
 # Artsy Xapp Middleware
 
-Node middleware that fetches an xapp token from Artsy and stores it in [sharify](https://github.com/artsy/sharify) data, and expires it.
+Node middleware that fetches an xapp token from Artsy, stores it in res.locals, and expires it.
 
 Use like so...
 
@@ -9,7 +9,11 @@ app.use require('artsy-xapp-middlware')
   artsyUrl: 'http://artsy.net'
   clientId: '133fsa3'
   clientSecret: 'f32j13f'
-  sharifyData: require('sharify').data
-````
 
-then access the xapp token via `sd.GRAVITY_XAPP_TOKEN`
+# In the request
+app.get '/', (req, res) ->
+  res.send "This app's XAPP token " + res.locals.artsyXappToken
+
+# Or require it anywhere
+xappToken = require('artsy-xapp-middlware').token
+````

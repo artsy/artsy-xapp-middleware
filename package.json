@@ -1,6 +1,6 @@
 {
   "name": "artsy-xapp-middleware",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "scripts": {
     "test": "mocha"
   },
@@ -13,6 +13,7 @@
     "should": "*",
     "mocha": "*",
     "express": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "rewire": "*"
   }
 }
