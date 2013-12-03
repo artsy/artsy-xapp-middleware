@@ -10,10 +10,6 @@ app.use require('artsy-xapp-middlware')
   clientId: '133fsa3'
   clientSecret: 'f32j13f'
 
-# In the request
 app.get '/', (req, res) ->
   res.send "This app's XAPP token " + res.locals.artsyXappToken
-
-# Or require it anywhere
-xappToken = require('artsy-xapp-middlware').token
 ````
