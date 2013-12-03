@@ -34,4 +34,5 @@ module.exports = (options) =>
         res.locals.artsyXappToken = @token = token
         next()
     else
+      res.locals.artsyXappToken = @token
       next()

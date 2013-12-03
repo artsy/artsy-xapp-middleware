@@ -29,6 +29,11 @@ describe 'artsyXappMiddleware', ->
       res.text.should.equal 'x-foo-token'
       done()
 
+  it 'injects the cached token on subsequent requests', (done) ->
+    request('http://localhost:4000/foo').end (res) ->
+      res.text.should.equal 'x-foo-token'
+      done()
+
   it 'expires the token after the expiration time', (done) ->
     token = artsyXappMiddleware.token
     request('http://localhost:4000/foo').end (res) ->
