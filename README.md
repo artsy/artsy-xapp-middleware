@@ -14,4 +14,4 @@ app.get '/', (req, res) ->
   res.send "This app's XAPP token " + res.locals.artsyXappToken
 ````
 
-The XAPP token is cached and accessible at any time via `require('artsy-xapp-middlware').token`. However be careful because this is unreliable as the token can expire at any time and will only be re-cached the next time the middleware is called.
+The XAPP token is cached and accessible at any time via `require('artsy-xapp-middlware').token`. However be careful because this is unreliable as the token can expire at any time causing the `.token` value to be null. The xapp token will only be re-cached the next time the middleware is called, so the most reliable way to access the token is through `res.locals.artsyXappToken`.
