@@ -6,7 +6,6 @@
 #   artsyUrl: 'http://artsy.net'
 #   clientId: '133fsa3'
 #   clientSecret: 'f32j13f'
-#   sharifyData: require('sharify').data
 #
 
 request = require 'superagent'
