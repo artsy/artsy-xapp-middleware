@@ -15,5 +15,6 @@
     "express": "*",
     "sinon": "*",
     "rewire": "*"
-  }
+  },
+  "license": "MIT"
 }
