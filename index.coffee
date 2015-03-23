@@ -18,7 +18,10 @@ module.exports = (options) =>
     setTimeout (=> module.exports.token = null), moment(expiresIn).unix() - moment().unix()
 
   (req, res, next) =>
-    unless module.exports.token?
+    if process.env.NODE_ENV is 'test'
+      res.locals.artsyXappToken = module.exports.token = 'xapp_foobar'
+      next()
+    else unless module.exports.token?
       fetch (err, token) =>
         res.locals.artsyXappToken = module.exports.token = token
         next()
