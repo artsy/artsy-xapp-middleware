@@ -1,4 +1,4 @@
-**NOTE:** THIS IS DEPRECATED IN FAVOR OF [artsy-xapp](https://github.com/artsy/artsy-xapp)
+**NOTE: THIS IS DEPRECATED IN FAVOR OF [artsy-xapp](https://github.com/artsy/artsy-xapp)**
 
 # Artsy Xapp Middleware
 
