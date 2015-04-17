@@ -1,3 +1,5 @@
+**NOTE:** THIS IS DEPRECATED IN FAVOR OF [artsy-xapp](https://github.com/artsy/artsy-xapp)
+
 # Artsy Xapp Middleware
 
 Node middleware that fetches an xapp token from Artsy, stores it in res.locals, and expires it.
